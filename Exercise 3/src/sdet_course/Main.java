@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 class A {
 
+	//Method that compares 2 strings.
 	public String compareTwoStrings(String word1, String word2) {
 
 		try {
@@ -19,6 +20,7 @@ class A {
 
 	}
 
+	// Method that checks if a string lenght is greater than 4 then print the string else print each character
 	public void greaterThanFour(String value) {
 
 		if (value.length() > 4) {
@@ -33,6 +35,7 @@ class A {
 		ASC, DESC
 	}
 
+	// Create a method that orders by desc and asc order based on a parameter.
 	public void sortAscDesc(ArrayList<String> arrayList, Sort sort) {
 
 		String temp;
@@ -93,6 +96,7 @@ class A {
 
 	}
 
+	// Create a method that removes null values
 	public void withoutNull(ArrayList<String> arrayList2) {
 
 		while (arrayList2.remove(null)) {
@@ -106,6 +110,7 @@ class A {
 
 	}
 
+	// Create a method that gives the missing number in 1 - 10
 	public void missingNumber() {
 		
 		int[] input = {2,2,3,4,4,5,6,7,8,10};
@@ -128,14 +133,18 @@ class A {
 	}
 }
 
+// Create a new class (B) that inherits from Parent (A) class.
+// Implement the interface in Class (B).
 class B extends A implements one {
 
+	// Use functionality from (A) in a new method from (B).
 	@Override
 	public void greaterThanFour(String value) {
 		System.out.println("Printing from class B");
 		super.greaterThanFour(value);
 	}
 
+	// Return type: Void - Body: NA - Parameters NA - Functionality: Print "Hello Interface"
 	@Override
 	public void printHello() {
 		System.out.println("Hello Interface");
@@ -144,8 +153,10 @@ class B extends A implements one {
 
 }
 
+// Create an interface.
 interface one {
 
+	// Do a declaration of a method
 	public void printHello();
 
 }
@@ -166,6 +177,9 @@ public class Main {
 		A sorting = new A();
 		ArrayList<String> arrayList = new ArrayList<String>();
 
+		/*Create a list of strings with the following values:
+		"Text", "Baseball", "Automation", "Java", "Laptop", null*/
+		
 		// Add elements to ArrayList
 		arrayList.add("Text");
 		arrayList.add("Baseball");
